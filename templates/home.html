@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <title>AI in Monitoring Carbon Emmisions</title>
+  <body>
+    <header>
+      <nav id="navbar" class="nav">
+        <ul class="nav-list">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#calculations">Calculations</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="carousel">
+      <div class="list">
+        <div class="item">
+          <img src="{{ url_for('static', filename='image1.jpeg')}}" />
+          <div class="content">
+            <div class="author">1</div>
+            <div class="title">CARBON</div>
+            <div class="topic">FOOTPRINT</div>
+            <div class="des">
+              <h4>
+                We empower you to make informed choices and take meaningful
+                steps towards a greener, more eco-friendly lifestyle. Easily
+                assess the environmental impact of your daily activities, from
+                household energy consumption to transportation habits, and
+                discover personalized tips on reducing your carbon footprint.
+                Join us in the journey towards a more sustainable future –
+                because every small change adds up to make a big difference.
+                Let's start our eco-conscious lifestyle today . Together, let's
+                make strides towards a healthier planet for generations to come!
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="{{ url_for('static', filename='image2.jpeg')}}" />
+          <div class="content">
+            <div class="author">2</div>
+            <div class="title">CARBON</div>
+            <div class="topic">FOOTPRINT</div>
+            <div class="des">
+              <h4>
+                We empower you to make informed choices and take meaningful
+                steps towards a greener, more eco-friendly lifestyle. Easily
+                assess the environmental impact of your daily activities, from
+                household energy consumption to transportation habits, and
+                discover personalized tips on reducing your carbon footprint.
+                Join us in the journey towards a more sustainable future –
+                because every small change adds up to make a big difference.
+                Let's start our eco-conscious lifestyle today . Together, let's
+                make strides towards a healthier planet for generations to come!
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="{{ url_for('static', filename='image3.jpeg')}}" />
+          <div class="content">
+            <div class="author">3</div>
+            <div class="title">CARBON</div>
+            <div class="topic">FOOTPRINT</div>
+            <div class="des">
+              <h4>
+                We empower you to make informed choices and take meaningful
+                steps towards a greener, more eco-friendly lifestyle. Easily
+                assess the environmental impact of your daily activities, from
+                household energy consumption to transportation habits, and
+                discover personalized tips on reducing your carbon footprint.
+                Join us in the journey towards a more sustainable future –
+                because every small change adds up to make a big difference.
+                Let's start our eco-conscious lifestyle today . Together, let's
+                make strides towards a healthier planet for generations to come!
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="{{ url_for('static', filename='image4.jpeg')}}" />
+          <div class="content">
+            <div class="author">4</div>
+            <div class="title">CARBON</div>
+            <div class="topic">FOOTPRINT</div>
+            <div class="des">
+              <h4>
+                We empower you to make informed choices and take meaningful
+                steps towards a greener, more eco-friendly lifestyle. Easily
+                assess the environmental impact of your daily activities, from
+                household energy consumption to transportation habits, and
+                discover personalized tips on reducing your carbon footprint.
+                Join us in the journey towards a more sustainable future –
+                because every small change adds up to make a big difference.
+                Let's start our eco-conscious lifestyle today . Together, let's
+                make strides towards a healthier planet for generations to come!
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- list thumnail -->
+      <div class="thumbnail">
+        <div class="listThumbnail">
+          <div class="item">
+            <img src="{{ url_for('static', filename='image1.jpeg')}}" />
+            <div class="content">
+              <div class="title">Name Slider</div>
+              <div class="description">Description</div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{{ url_for('static', filename='image2.jpeg')}}" />
+            <div class="content">
+              <div class="title">Name Slider</div>
+              <div class="description">Description</div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{{ url_for('static', filename='image3.jpeg')}}"/>
+            <div class="content">
+              <div class="title">Name Slider</div>
+              <div class="description">Description</div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{{ url_for('static', filename='image4.jpeg')}}" />
+            <div class="content">
+              <div class="title">Name Slider</div>
+              <div class="description">Description</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrows">
+        <button id="prev">&lt;</button>
+        <button id="next">&gt;</button>
+      </div>
+
+      <div class="time"></div>
+    </div>
+    <section id="home" class="home">
+      
+      <div class="responsive-container-block bigContainer">
+        <div class="responsive-container-block Container">
+          <img class="mainImg" src="https://pub.mdpi-res.com/electronics/electronics-12-02288/article_deploy/html/images/electronics-12-02288-g002a.png?1684411770">
+          <div class="allText aboveText">
+            <p class="text-blk headingText">
+              Our Mission
+            </p>
+            <p class="text-blk subHeadingText">
+              "A Sustainable Tomorrow"
+            </p>
+            <p class="text-blk description">
+              "We envision a future where carbon emissions are significantly reduced, paving the way for a sustainable and thriving planet. Our vision is rooted in the belief that every action, no matter how small, contributes to a collective effort to combat climate change. We strive to be a catalyst for positive change for current and future generations."
+            </p>
+          </div>
+        </div>
+        <div class="responsive-container-block Container bottomContainer">
+          <img class="mainImg" src="https://im.indiatimes.in/amp/2019/Nov/how_to_how_to_reduce_vehicle_emissions_car_emissions_bike_emissions_reduce_vehicle_pollution_ve_1573540742.jpg?w=1200&h=900&cc=1">
+          <div class="allText bottomText">
+            <p class="text-blk headingText">
+              Our Vision
+            </p>
+            <p class="text-blk subHeadingText">
+              "Empowering Change Through Data and Innovation"
+            </p>
+            <p class="text-blk description">
+              "As stewards of environmental responsibility, We are dedicated to providing accessible tools and information that enable informed decision-making, encouraging the adoption of sustainable practices. Through cutting-edge technology and a commitment to transparency, we aim to drive a global shift towards a low-carbon future, fostering a harmonious coexistence between humanity and the planet we call home."
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="calculations" class="calculations">
+      <div class="container">
+        <h2 class="calculations-section-header nowrap">
+          Prediction of CO2 emissions of Cars
+        </h2>
+        <form id="survey-form" method="post" action="{{ url_for('predict')}}">
+          <div class="form-group">
+            <label id="manufacturer-label" for="name">Manufacturer</label>
+
+            <select id="dropdown" class="form-control" name="a" required>
+              <option value="">--Please choose an option--</option>
+              <option value="0">ABARTH</option>
+              <option value="1">ALFA ROMEO</option>
+              <option value="2">ALPINE</option>
+              <option value="3">ASTON MARTIN LAGONDA</option>
+              <option value="4">BENTLEY MOTORS</option>
+              <option value="5">CADILLAC</option>
+              <option value="6">CHEVROLET</option>
+              <option value="7">CHRYSLER JEEP</option>
+              <option value="8">CITROEN</option>
+              <option value="9">DACIA</option>
+              <option value="10">DS</option>
+              <option value="11">FERRARI</option>
+              <option value="12">FIAT</option>
+              <option value="13">FORD</option>
+              <option value="14">GENESIS</option>
+              <option value="15">HONDA</option>
+              <option value="16">HYUNDAI</option>
+              <option value="17">INEOS Automotive Ltd</option>
+              <option value="18">JAGUAR</option>
+              <option value="19">KIA</option>
+              <option value="20">LAND ROVER</option>
+              <option value="21">LEXUS</option>
+              <option value="22">LOTUS</option>
+              <option value="23">MASERATI</option>
+              <option value="24">MAZDA</option>
+              <option value="25">McLaren</option>
+              <option value="26">MERCEDES-BENZ</option>
+              <option value="27">MG MOTORS UK</option>
+              <option value="28">MORGAN MOTOR COMPANY</option>
+              <option value="29">NISSAN</option>
+              <option value="30">PEUGEOT</option>
+              <option value="31">RENAULT</option>
+              <option value="32">Rolls Royce</option>
+              <option value="33">SEAT</option>
+              <option value="34">SSANGYONG</option>
+              <option value="35">SUBARU</option>
+              <option value="36">SUZUKI</option>
+              <option value="37">TOYOTA</option>
+              <option value="38">VOLVO</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label id="Vehicle_Type-label" for="name">Vehicle Type</label>
+
+            <select id="dropdown" class="form-control" name="c" required>
+              <option value="">--Please choose an option--</option>
+              <option value="0">Automatic</option>
+              <option value="1">Manual</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label id="Fuel_Type-label" for="name">Fuel Type</label>
+
+            <select id="dropdown" class="form-control" name="d" required>
+              <option value="">--Please choose an option--</option>
+              <option value="0">Diesel</option>
+              <option value="1">Electric / Diesel</option>
+              <option value="2">Electric / Petrol</option>
+              <option value="3">Petrol</option>
+              <option value="4">Petrol / LPG</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label id="Power_Train-label" for="name">Power Train</label>
+
+            <select id="dropdown" class="form-control" name="e" required>
+              <option value="">--Please choose an option--</option>
+              <option value="0">Hybrid Electric Vehicle (HEV)</option>
+              <option value="1">Internal Combustion Engine (ICE)</option>
+              <option value="2">Micro Hybrid</option>
+              <option value="3">Mild Hybrid Electric Vehicle (MHEV)</option>
+              <option value="4">Plug-in Hybrid Electric Vehicle (PHEV)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label id="transmission-label" for="name">Transmission</label>
+
+            <select id="dropdown" class="form-control" name="b" required>
+              <option value="">--Please choose an option--</option>
+              <option value=0>5MT</option>
+              <option value=1>6AT</option>
+              <option value=2>6MT</option>
+              <option value=3>6-speed auto DCT</option>
+              <option value=4>7AT-FWD</option>
+              <option value=5>7A-FWD</option>
+              <option value=6>7DCT</option>
+              <option value=7>7SP. SSG</option>
+              <option value=8>7-Speed DCT</option>
+              <option value=9>8AT</option>
+              <option value=10>8AT-AWD</option>
+              <option value=11>8AT-FWD</option>
+              <option value=12>8A-AWD</option>
+              <option value=13>8SP, SSG</option>
+              <option value=14>10 Speed Automatic</option>
+              <option value=15>A1</option>
+              <option value=16>A4</option>
+              <option value=17>A5</option>
+              <option value=18>A6</option>
+              <option value=19>A7</option>
+              <option value=20>A8</option>
+              <option value=21>A8-AWD</option>
+              <option value=22>A9</option>
+              <option value=23>A9-AWD</option>
+              <option value=24>A10</option>
+              <option value=25>AC</option>
+              <option value=26>AMT5</option>
+              <option value=27>AT6</option>
+              <option value=28>CVT</option>
+              <option value=29>DCT6</option>
+              <option value=30>DCT7</option>
+              <option value=31>DCT8</option>
+              <option value=32>eCVT</option>
+              <option value=33>E-CVT</option>
+              <option value=34>M5</option>
+              <option value=35>M6</option>
+              <option value=36>M6-AWD</option>
+              <option value=37>M7</option>
+              <option value=38>MT5</option>
+              <option value=39>MT6</option>
+              <option value=40>MT7</option>
+              <option value=41>SA5</option>
+              <option value=42>SA7</option>
+              <option value=43>SA8</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label id="Engine-power_PS-label" for="name">Engine-power PS</label>
+            <input
+              type="text"
+              name="f"
+              id="name"
+              class="form-control"
+              placeholder="Enter your Value"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <p>{{ prediction_text }}</p>
+          </div>
+         <div>
+            <p>
+              <button type="submit" id="submit" class="btn btn-show-all">
+                Calculate
+              </button>
+            </p>
+          </div>
+            <p>
+              <input type="reset" class="btn btn-show-all" value="Reset">
+            </p>
+           </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="testimonial">
+        <article>
+            <h1>ABOUT US</h1><br><br>
+            <h3><u><i><b>Our Team</b></i></u></h3>
+            <div class="image">
+              <img src="{{ url_for('static', filename='milind.jpeg')}}"> <br>MILIND  SAINI
+            </div>
+            <div class="image">
+              <img src="{{ url_for('static', filename='ranit.jpeg')}}"><br>RANIT SRIVASTAVA 
+            </div>
+            <div class="image">
+              <img src="{{ url_for('static', filename='isita.jpeg')}}"><br>ISHITA KANAUJIA
+            </div><br>
+            <div class="image">
+              <img src="{{ url_for('static', filename='aishwarya.jpeg')}}"><br>AISHWARYA GUPTA
+            </div>
+            <div class="image">
+              <img src="{{ url_for('static', filename='shreya.jpeg')}}"><br>SHREYA VERMA
+            </div> 
+             <blockquote>
+              <div class="para">
+               <div class="text1">
+                The Carbon Emission calculation from vehicles determines<br> the CO2 emissions of a onroad vehicle that arise during<br> a journey. 
+                The calculation is made per vehicle and not per<br> person. It not only takes into account the direct emissions<br> arising from fuel combustion but also so-called grey emissions.<br>
+                These arise from the production of the vehicle, the provision<br> of road infrastructure and the extraction, transportation and<br> processing of the crude oil.
+              </div>
+              <div class="foot">
+              </div><br>
+          </div>
+            </blockquote> 
+        </article>
+</div> 
+
+    </section>
+    <script src="{{ url_for('static', filename='slider.js')}}"></script>
+    <footer></footer>
+  </body>
+</html>
